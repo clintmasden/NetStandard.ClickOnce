@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAAD61EB-DC37-470B-BFA2-81517C63BFA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MageUINetStandard</RootNamespace>
+    <AssemblyName>MageUINetStandard</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4272DA0FD343C0917ECA2DC20CF3F54234265094</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MageUINetStandard_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=3.1.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.3.1.0\lib\net46\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ManifestRoutines.cs" />
+    <Compile Include="Models\Dependency.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files\Dlls\Microsoft.Win32.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\netfx.force.conflicts.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\netstandard.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.AppContext.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Collections.Concurrent.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Collections.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Collections.NonGeneric.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Collections.Specialized.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.ComponentModel.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.ComponentModel.EventBasedAsync.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.ComponentModel.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.ComponentModel.TypeConverter.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Console.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Data.Common.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.Contracts.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.Debug.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.FileVersionInfo.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.Process.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.StackTrace.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.TextWriterTraceListener.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.Tools.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.TraceSource.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Diagnostics.Tracing.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Drawing.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Dynamic.Runtime.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Globalization.Calendars.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Globalization.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Globalization.Extensions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.Compression.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.Compression.ZipFile.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.FileSystem.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.FileSystem.DriveInfo.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.FileSystem.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.FileSystem.Watcher.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.IsolatedStorage.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.MemoryMappedFiles.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.Pipes.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.IO.UnmanagedMemoryStream.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Linq.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Linq.Expressions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Linq.Parallel.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Linq.Queryable.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Http.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.NameResolution.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.NetworkInformation.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Ping.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Requests.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Security.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.Sockets.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.WebHeaderCollection.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.WebSockets.Client.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Net.WebSockets.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.ObjectModel.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Reflection.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Reflection.Extensions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Reflection.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Resources.Reader.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Resources.ResourceManager.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Resources.Writer.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.CompilerServices.VisualC.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Extensions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Handles.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.InteropServices.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.InteropServices.RuntimeInformation.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Numerics.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Serialization.Formatters.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Serialization.Json.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Serialization.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Runtime.Serialization.Xml.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Claims.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Cryptography.Algorithms.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Cryptography.Csp.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Cryptography.Encoding.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Cryptography.Primitives.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Cryptography.X509Certificates.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.Principal.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Security.SecureString.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Text.Encoding.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Text.Encoding.Extensions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Text.RegularExpressions.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.Overlapped.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.Tasks.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.Tasks.Parallel.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.Thread.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.ThreadPool.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Threading.Timer.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.ReaderWriter.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.XDocument.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.XmlDocument.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.XmlSerializer.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.XPath.dll.deploy" />
+    <EmbeddedResource Include="Files\Dlls\System.Xml.XPath.XDocument.dll.deploy" />
+    <EmbeddedResource Include="Files\standard.manifest" />
+    <None Include="MageUINetStandard_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files\mage.exe" />
+    <EmbeddedResource Include="Files\mageui.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.3.1.3\build\Fody.targets" Condition="Exists('..\packages\Fody.3.1.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.3.1.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.3.1.3\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" />
+</Project>
