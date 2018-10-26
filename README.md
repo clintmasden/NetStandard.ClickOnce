@@ -9,3 +9,7 @@ Unable to install or run the application.  The application requires that the ass
 Article:
 
 https://clintmasden.com/solution-class-library-manifest-net-standard-reference-click-once-deployment
+
+References:
+
+https://github.com/dotnet/standard/issues/529
